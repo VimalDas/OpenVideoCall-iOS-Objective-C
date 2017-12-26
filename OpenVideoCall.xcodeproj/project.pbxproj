@@ -29,6 +29,7 @@
 		07D29C5B1E9E1ED900C3583C /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C5A1E9E1ED900C3583C /* AgoraRtcEngineKit.framework */; };
 		07D29C5D1E9E1EFE00C3583C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C5C1E9E1EFE00C3583C /* libresolv.tbd */; };
 		07F531B91E28AE69009BFE58 /* OpenVideoCallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F531B81E28AE69009BFE58 /* OpenVideoCallUITests.m */; };
+		0FB4FB651FF1F979006C7AE3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB4FB641FF1F979006C7AE3 /* SystemConfiguration.framework */; };
 		A7327ECA1FC7B51900882882 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7327EC81FC7B51900882882 /* libcrypto.a */; };
 		A7327ECB1FC7B51900882882 /* AgoraRtcCryptoLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7327EC91FC7B51900882882 /* AgoraRtcCryptoLoader.framework */; };
 		A7327ECE1FC7B5E300882882 /* EncryptionType.m in Sources */ = {isa = PBXBuildFile; fileRef = A7327ECD1FC7B5E300882882 /* EncryptionType.m */; };
@@ -85,6 +86,7 @@
 		07F531B61E28AE69009BFE58 /* OpenVideoCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenVideoCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F531B81E28AE69009BFE58 /* OpenVideoCallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenVideoCallUITests.m; sourceTree = "<group>"; };
 		07F531BA1E28AE69009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FB4FB641FF1F979006C7AE3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A7327EC81FC7B51900882882 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = OpenVideoCall/libcrypto.a; sourceTree = "<group>"; };
 		A7327EC91FC7B51900882882 /* AgoraRtcCryptoLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcCryptoLoader.framework; path = OpenVideoCall/AgoraRtcCryptoLoader.framework; sourceTree = "<group>"; };
 		A7327ECC1FC7B5E300882882 /* EncryptionType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptionType.h; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FB4FB651FF1F979006C7AE3 /* SystemConfiguration.framework in Frameworks */,
 				A7327ECA1FC7B51900882882 /* libcrypto.a in Frameworks */,
 				A7327ECB1FC7B51900882882 /* AgoraRtcCryptoLoader.framework in Frameworks */,
 				07D29C5D1E9E1EFE00C3583C /* libresolv.tbd in Frameworks */,
@@ -226,6 +229,7 @@
 		076C59AA1DDDDE5C00F813E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0FB4FB641FF1F979006C7AE3 /* SystemConfiguration.framework */,
 				A7327EC91FC7B51900882882 /* AgoraRtcCryptoLoader.framework */,
 				A7327EC81FC7B51900882882 /* libcrypto.a */,
 				07D29C5C1E9E1EFE00C3583C /* libresolv.tbd */,
