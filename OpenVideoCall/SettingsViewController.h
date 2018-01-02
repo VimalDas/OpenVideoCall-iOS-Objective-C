@@ -11,10 +11,10 @@
 
 @class SettingsViewController;
 @protocol SettingsVCDelegate <NSObject>
-- (void)settingsVC:(SettingsViewController *)settingsVC didSelectProfile:(AgoraRtcVideoProfile)profile;
+- (void)settingsVC:(SettingsViewController *)settingsVC didSelectProfile:(AgoraVideoProfile)profile;
 @end
 
 @interface SettingsViewController : UIViewController
-@property (assign, nonatomic) AgoraRtcVideoProfile videoProfile;
+@property (assign, nonatomic) AgoraVideoProfile videoProfile;
 @property (weak, nonatomic) id<SettingsVCDelegate> delegate;
 @end
