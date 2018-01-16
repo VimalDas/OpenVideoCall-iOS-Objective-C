@@ -11,7 +11,6 @@
 @interface ProfileCell()
 @property (weak, nonatomic) IBOutlet UILabel *resLabel;
 @property (weak, nonatomic) IBOutlet UILabel *frameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bitRateLabel;
 @end
 
 @implementation ProfileCell
@@ -19,7 +18,6 @@
 - (void)updateWithProfile:(AgoraVideoProfile)profile isSelected:(BOOL)isSelected {
     self.resLabel.text = [self resolutionOfProfile:profile];
     self.frameLabel.text = [self fpsOfProfile:profile];
-    self.bitRateLabel.text = [self bitRateOfProfile:profile];
     self.backgroundColor = isSelected ? [UIColor colorWithRed:0 green:0 blue:0.5 alpha:0.3] : [UIColor whiteColor];
 }
 
@@ -37,18 +35,6 @@
 
 - (NSString *)fpsOfProfile:(AgoraVideoProfile)profile {
     return @"15";
-}
-
-- (NSString *)bitRateOfProfile:(AgoraVideoProfile)profile {
-    switch (profile) {
-        case AgoraVideoProfileLandscape120P: return @"65"; break;
-        case AgoraVideoProfileLandscape180P: return @"140"; break;
-        case AgoraVideoProfileLandscape240P: return @"200"; break;
-        case AgoraVideoProfileLandscape360P: return @"400"; break;
-        case AgoraVideoProfileLandscape480P: return @"500"; break;
-        case AgoraVideoProfileLandscape720P: return @"1130"; break;
-        default: return @""; break;
-    }
 }
 
 @end
