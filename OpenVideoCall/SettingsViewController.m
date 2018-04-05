@@ -18,17 +18,17 @@
 @implementation SettingsViewController
 - (NSArray *)profiles {
     if (!_profiles) {
-        _profiles = @[@(AgoraRtc_VideoProfile_120P),
-                      @(AgoraRtc_VideoProfile_180P),
-                      @(AgoraRtc_VideoProfile_240P),
-                      @(AgoraRtc_VideoProfile_360P),
-                      @(AgoraRtc_VideoProfile_480P),
-                      @(AgoraRtc_VideoProfile_720P)];
+        _profiles = @[@(AgoraVideoProfileLandscape120P),
+                      @(AgoraVideoProfileLandscape180P),
+                      @(AgoraVideoProfileLandscape240P),
+                      @(AgoraVideoProfileLandscape360P),
+                      @(AgoraVideoProfileLandscape480P),
+                      @(AgoraVideoProfileLandscape720P)];
     }
     return _profiles;
 }
 
-- (void)setVideoProfile:(AgoraRtcVideoProfile)videoProfile {
+- (void)setVideoProfile:(AgoraVideoProfile)videoProfile {
     _videoProfile = videoProfile;
     [self.profileTableView reloadData];
 }
@@ -45,14 +45,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell" forIndexPath:indexPath];
-    AgoraRtcVideoProfile selectedProfile = [self.profiles[indexPath.row] integerValue];
+    AgoraVideoProfile selectedProfile = [self.profiles[indexPath.row] integerValue];
     [cell updateWithProfile:selectedProfile isSelected:(selectedProfile == self.videoProfile)];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AgoraRtcVideoProfile selectedProfile = [self.profiles[indexPath.row] integerValue];
+    AgoraVideoProfile selectedProfile = [self.profiles[indexPath.row] integerValue];
     self.videoProfile = selectedProfile;
 }
 @end

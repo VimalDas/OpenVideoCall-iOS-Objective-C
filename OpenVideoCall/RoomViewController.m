@@ -328,7 +328,7 @@ static NSInteger streamID = 0;
 #pragma mark - Agora Media SDK
 - (void)loadAgoraKit {
     self.agoraKit = [AgoraRtcEngineKit sharedEngineWithAppId:[KeyCenter AppId] delegate:self];
-    [self.agoraKit setChannelProfile:AgoraRtc_ChannelProfile_Communication];
+    [self.agoraKit setChannelProfile:AgoraChannelProfileCommunication];
     [self.agoraKit enableVideo];
     [self.agoraKit setVideoProfile:self.videoProfile swapWidthAndHeight:NO];
     
@@ -340,7 +340,7 @@ static NSInteger streamID = 0;
     [self addLocalSession];
     [self.agoraKit startPreview];
     
-    int code = [self.agoraKit joinChannelByKey:nil channelName:self.roomName info:nil uid:0 joinSuccess:nil];
+    int code = [self.agoraKit joinChannelByToken:nil channelId:self.roomName info:nil uid:0 joinSuccess:nil];
     if (code == 0) {
         [self setIdleTimerActive:NO];
     } else {
@@ -365,7 +365,7 @@ static NSInteger streamID = 0;
     }
 }
 
-- (void)rtcEngine:(AgoraRtcEngineKit *)engine didOfflineOfUid:(NSUInteger)uid reason:(AgoraRtcUserOfflineReason)reason {
+- (void)rtcEngine:(AgoraRtcEngineKit *)engine didOfflineOfUid:(NSUInteger)uid reason:(AgoraUserOfflineReason)reason {
     VideoSession *deleteSession;
     for (VideoSession *session in self.videoSessions) {
         if (session.uid == uid) {

@@ -14,7 +14,7 @@
 @interface MainViewController () <SettingsVCDelegate, RoomVCDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *roomNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *encrypTextField;
-@property (assign, nonatomic) AgoraRtcVideoProfile videoProfile;
+@property (assign, nonatomic) AgoraVideoProfile videoProfile;
 @property (assign, nonatomic) EncrypType encrypType;
 @end
 
@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.videoProfile = AgoraRtc_VideoProfile_360P;
+    self.videoProfile = AgoraVideoProfileLandscape360P;
     self.encrypType = [[EncryptionType encrypTypeArray][0] intValue];
 }
 
@@ -75,7 +75,7 @@
 }
 
 //MARK: - delegates
-- (void)settingsVC:(SettingsViewController *)settingsVC didSelectProfile:(AgoraRtcVideoProfile)profile {
+- (void)settingsVC:(SettingsViewController *)settingsVC didSelectProfile:(AgoraVideoProfile)profile {
     self.videoProfile = profile;
     [self dismissViewControllerAnimated:YES completion:nil];
 }

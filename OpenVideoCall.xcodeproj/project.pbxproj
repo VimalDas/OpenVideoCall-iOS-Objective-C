@@ -30,6 +30,9 @@
 		07D29C5D1E9E1EFE00C3583C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C5C1E9E1EFE00C3583C /* libresolv.tbd */; };
 		07F531B91E28AE69009BFE58 /* OpenVideoCallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F531B81E28AE69009BFE58 /* OpenVideoCallUITests.m */; };
 		0FB4FB651FF1F979006C7AE3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB4FB641FF1F979006C7AE3 /* SystemConfiguration.framework */; };
+		946D7A4420760A3A000A63C1 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D7A4120760A39000A63C1 /* AgoraRtcEngineKit.framework */; };
+		946D7A4520760A3A000A63C1 /* AgoraRtcCryptoLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D7A4220760A39000A63C1 /* AgoraRtcCryptoLoader.framework */; };
+		946D7A4620760A3A000A63C1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D7A4320760A39000A63C1 /* libcrypto.a */; };
 		A7327ECA1FC7B51900882882 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7327EC81FC7B51900882882 /* libcrypto.a */; };
 		A7327ECB1FC7B51900882882 /* AgoraRtcCryptoLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7327EC91FC7B51900882882 /* AgoraRtcCryptoLoader.framework */; };
 		A7327ECE1FC7B5E300882882 /* EncryptionType.m in Sources */ = {isa = PBXBuildFile; fileRef = A7327ECD1FC7B5E300882882 /* EncryptionType.m */; };
@@ -87,6 +90,10 @@
 		07F531B81E28AE69009BFE58 /* OpenVideoCallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenVideoCallUITests.m; sourceTree = "<group>"; };
 		07F531BA1E28AE69009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB4FB641FF1F979006C7AE3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		946D7A4120760A39000A63C1 /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
+		946D7A4220760A39000A63C1 /* AgoraRtcCryptoLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcCryptoLoader.framework; sourceTree = "<group>"; };
+		946D7A4320760A39000A63C1 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../Downloads/Agora_Native_SDK_for_iOS_FULL/libs/libcrypto.a; sourceTree = "<group>"; };
+		946D7A4720760A41000A63C1 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../Downloads/Agora_Native_SDK_for_iOS_FULL/libs/libcrypto.a; sourceTree = "<group>"; };
 		A7327EC81FC7B51900882882 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = OpenVideoCall/libcrypto.a; sourceTree = "<group>"; };
 		A7327EC91FC7B51900882882 /* AgoraRtcCryptoLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcCryptoLoader.framework; path = OpenVideoCall/AgoraRtcCryptoLoader.framework; sourceTree = "<group>"; };
 		A7327ECC1FC7B5E300882882 /* EncryptionType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptionType.h; sourceTree = "<group>"; };
@@ -108,10 +115,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946D7A4420760A3A000A63C1 /* AgoraRtcEngineKit.framework in Frameworks */,
 				0FB4FB651FF1F979006C7AE3 /* SystemConfiguration.framework in Frameworks */,
 				A7327ECA1FC7B51900882882 /* libcrypto.a in Frameworks */,
+				946D7A4520760A3A000A63C1 /* AgoraRtcCryptoLoader.framework in Frameworks */,
 				A7327ECB1FC7B51900882882 /* AgoraRtcCryptoLoader.framework in Frameworks */,
 				07D29C5D1E9E1EFE00C3583C /* libresolv.tbd in Frameworks */,
+				946D7A4620760A3A000A63C1 /* libcrypto.a in Frameworks */,
 				076C59B61DDDDE7A00F813E2 /* AVFoundation.framework in Frameworks */,
 				076C59B41DDDDE7600F813E2 /* libc++.tbd in Frameworks */,
 				076C59B21DDDDE7000F813E2 /* AudioToolbox.framework in Frameworks */,
@@ -154,6 +164,9 @@
 		076C59741DDDBC3500F813E2 /* OpenVideoCall */ = {
 			isa = PBXGroup;
 			children = (
+				946D7A4220760A39000A63C1 /* AgoraRtcCryptoLoader.framework */,
+				946D7A4120760A39000A63C1 /* AgoraRtcEngineKit.framework */,
+				946D7A4720760A41000A63C1 /* libcrypto.a */,
 				076C598F1DDDBCFE00F813E2 /* Controllers */,
 				076C59901DDDBD0600F813E2 /* Views */,
 				076C59911DDDBD0D00F813E2 /* Models */,
@@ -206,6 +219,7 @@
 		076C59911DDDBD0D00F813E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				946D7A4320760A39000A63C1 /* libcrypto.a */,
 				076C599D1DDDBF2200F813E2 /* KeyCenter.h */,
 				076C599E1DDDBF2200F813E2 /* KeyCenter.m */,
 				076C59A11DDDBF3100F813E2 /* VideoSession.h */,
@@ -301,7 +315,6 @@
 				TargetAttributes = {
 					076C59711DDDBC3500F813E2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 48TB6ZZL5S;
 						ProvisioningStyle = Manual;
 					};
 					07F531B51E28AE69009BFE58 = {
@@ -508,8 +521,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 48TB6ZZL5S;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,10 +536,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenVideoCall",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenVideoCall;
+				PRODUCT_BUNDLE_IDENTIFIER = co.vimal.OpenVideoCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc253ab3-71e4-40a3-a57c-a3a763407202";
-				PROVISIONING_PROFILE_SPECIFIER = AgoraIODev2017;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -534,8 +548,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 48TB6ZZL5S;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,10 +563,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenVideoCall",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenVideoCall;
+				PRODUCT_BUNDLE_IDENTIFIER = co.vimal.OpenVideoCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc253ab3-71e4-40a3-a57c-a3a763407202";
-				PROVISIONING_PROFILE_SPECIFIER = AgoraIODev2017;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
